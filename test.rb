@@ -13,7 +13,7 @@ require 'time'
 require "date"
 
 
-@bot = Discordrb::Commands::CommandBot.new token:'NjEwNTUxNzIwNTY0NjIxMzIw.XVRtBA.Xi8MtCwT00nreowDB63TBp7sWpk',prefix: '!' 
+@bot = Discordrb::Commands::CommandBot.new token:'Mzc3MzU4Mzk4ODUwNTk2ODY0.XVRt1A.k24Et0SIG2nctvUl3wabLad5ha8',prefix: '!' 
 
 
 @bot.command(:start) do |event|
