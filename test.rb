@@ -1,3 +1,4 @@
+
 require 'discordrb'
 require 'open3'
 require 'twitter'
@@ -12,7 +13,7 @@ require 'time'
 require "date"
 
 
-@bot = Discordrb::Commands::CommandBot.new token: 'NjEwNTUxNzIwNTY0NjIxMzIw.XVRlpg.Njq3O-sqd4QOfFGkR_E18zILrNk', client_id: '610551720564621320',prefix: '!' 
+@bot = Discordrb::Commands::CommandBot.new token:'NjEwNTUxNzIwNTY0NjIxMzIw.XVRrLA.c1yNGgsqA8MhkZnA9cbRtvJpKc4',prefix: '!' 
 
 
 @bot.command(:start) do |event|
