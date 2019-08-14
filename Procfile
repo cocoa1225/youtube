@@ -1,0 +1,1 @@
+bot: bundle exec ruby discord_bot.rb
