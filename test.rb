@@ -13,7 +13,7 @@ require 'time'
 require "date"
 
 
-@bot = Discordrb::Commands::CommandBot.new token:'NjEwNTUxNzIwNTY0NjIxMzIw.XVRwHA.0MhNy4RXLup4f9r0DOG44T8HjR8',prefix: '!' 
+@bot = Discordrb::Commands::CommandBot.new token: 'NjEwNTUxNzIwNTY0NjIxMzIw.XVG7yw._UkS1YodWoaY-iACjn-l_flDJGY', prefix: '!' 
 
 
 @bot.command(:start) do |event|
@@ -22,6 +22,7 @@ GOOGLE_API_KEY="AIzaSyD2urTlYpvJU_iSvDRLBR3_2FVAvb3crFM"
 @snippet2 = nil
 @channel_name = event.channel.name
 @temp = '2019-08-13T22:00:00'
+
 def timer(arg, &proc)
   x = case arg
   when Numeric then arg
@@ -31,7 +32,7 @@ def timer(arg, &proc)
   end
   sleep x if block_given?
   yield
-end
+  end
 
 def s(event)
   puts "sleep"
@@ -87,9 +88,11 @@ url += @snippet2.video_id
       puts @f
       puts url
     end
+    h2 = Thread.new do
 timer(Time.parse(@f)) do
   event.send_message("#{event.user.mention}\n配信開始時間です\n#{url}")
     end
+  end
     @bot.game=("配信予定はありません")
       puts "32700sleep"
         sleep(32700)
